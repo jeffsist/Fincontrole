@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(224, 76%, 63%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(142, 76%, 36%);
+  --secondary-foreground: hsl(60, 9.1%, 97.8%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom FinControle colors */
+  --fincontrole-primary: hsl(224, 76%, 63%);
+  --fincontrole-secondary: hsl(142, 76%, 36%);
+  --fincontrole-warning: hsl(13, 93%, 63%);
+  --fincontrole-error: hsl(348, 83%, 62%);
+  --fincontrole-dark: hsl(210, 29%, 29%);
+  --fincontrole-light: hsl(210, 17%, 98%);
+  
+  /* Chart colors */
+  --chart-1: hsl(224, 76%, 63%);
+  --chart-2: hsl(142, 76%, 36%);
+  --chart-3: hsl(13, 93%, 63%);
+  --chart-4: hsl(348, 83%, 62%);
+  --chart-5: hsl(270, 95%, 75%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 1%);
+  --foreground: hsl(0, 0%, 96%);
+  --muted: hsl(0, 0%, 3%);
+  --muted-foreground: hsl(240, 5%, 60%);
+  --popover: hsl(0, 0%, 2%);
+  --popover-foreground: hsl(0, 0%, 96%);
+  --card: hsl(0, 0%, 2%);
+  --card-foreground: hsl(0, 0%, 96%);
+  --border: hsl(240, 5%, 8%);
+  --input: hsl(240, 5%, 8%);
+  --primary: hsl(224, 76%, 63%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(142, 76%, 36%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 5%, 6%);
+  --accent-foreground: hsl(0, 0%, 96%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Chart colors for dark mode */
+  --chart-1: hsl(224, 76%, 68%);
+  --chart-2: hsl(142, 76%, 41%);
+  --chart-3: hsl(13, 93%, 68%);
+  --chart-4: hsl(348, 83%, 67%);
+  --chart-5: hsl(270, 95%, 80%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gray-200 text-black hover:bg-gray-300 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-600 dark:text-white dark:hover:bg-green-700;
+  }
+
+  /* Ensure all default buttons have proper contrast */
+  .btn-default {
+    @apply bg-gray-200 text-black hover:bg-gray-300 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700;
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--fincontrole-primary), hsl(220, 85%, 57%));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, var(--fincontrole-secondary), hsl(155, 85%, 45%));
+  }
+
+  .text-primary-custom {
+    color: var(--fincontrole-primary);
+  }
+
+  .text-secondary-custom {
+    color: var(--fincontrole-secondary);
+  }
+
+  .bg-primary-custom {
+    background-color: var(--fincontrole-primary);
+  }
+
+  .bg-secondary-custom {
+    background-color: var(--fincontrole-secondary);
+  }
+
+  .nav-link {
+    @apply flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply bg-primary text-white;
+  }
+
+  .nav-link:not(.active) {
+    @apply text-foreground hover:bg-accent;
+  }
+
+  .mobile-safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .summary-card {
+    @apply bg-card rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .fincontrole-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .fincontrole-button-primary {
+    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary/50;
+  }
+
+  .fincontrole-button-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary/50;
+  }
+
+  .fincontrole-input {
+    @apply w-full px-4 py-2 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 bg-background text-foreground;
+  }
+
+  .fincontrole-select {
+    @apply w-full px-4 py-2 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground appearance-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .mobile-only {
+    @apply block lg:hidden;
+  }
+
+  .desktop-only {
+    @apply hidden lg:block;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Mobile-first responsive design utilities */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding: 1rem;
+  }
+
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focus states for accessibility */
+.focus-visible:focus {
+  outline: 2px solid var(--fincontrole-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-shadow {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
